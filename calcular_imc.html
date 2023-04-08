@@ -1,0 +1,28 @@
+<meta characters = "UFT-8">
+
+<h1>
+    PROGRAMA PARA CALCULAR EL IMC DE UNA PERSONA
+</h1>
+
+<script>
+
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+    function calcularImc(peso, altura){
+        return (peso / (altura * altura))
+    }
+
+    var nombreUsuario = prompt("Porfavor escriba su nombre");
+    var pesoUsuario = prompt("Porfavor " + nombreUsuario + " digite su peso");
+    var alturaUsuario = prompt("Porfavor " + nombreUsuario + " digite su altura");
+
+    imprimir("El calculo de su IMC es: " + calcularImc(pesoUsuario, alturaUsuario));
+
+</script>
