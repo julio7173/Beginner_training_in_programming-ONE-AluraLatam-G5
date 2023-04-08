@@ -1,0 +1,35 @@
+<meta characters = "UFT-8">
+
+<h1>
+    
+    Diferencia de Edades entre mis hermanos y yo
+
+</h1>
+
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+    }    
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+        saltarLinea();
+    }
+    var anho = 2023;
+
+    var nacimiento1 = 2001;
+    var nacimiento2 = 2005;
+    var nacimiento3 = 2010;
+    
+    var diferencia1 = (anho - nacimiento1) - (anho - nacimiento2);
+    var diferencia2 = (anho - nacimiento1) - (anho - nacimiento3);
+    var diferencia3 = (anho - nacimiento2) - (anho - nacimiento3); 
+
+    imprimir("Hola, mi nombre es Julio Cesar, tengo dos hermanos menores a mi, el primero se llana Vincent y el segundo se llama Leonel Richi");
+    imprimir("Yo naci en el 2001, Vincent nacio en el 2005 y Leonel Richi nacio en el 2010");
+    imprimir("La diferencia de edad entre Vincetn y Yo es de: " + diferencia1);
+    imprimir("La diferencia de edad entre Leonel Richi y Yo es de: " + diferencia2);
+    imprimir("La diferencia de edad entre Vincent y Leonel Richi es de: " + diferencia3);
+
+</script>
