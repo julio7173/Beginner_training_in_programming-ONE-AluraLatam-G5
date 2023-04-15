@@ -1,0 +1,35 @@
+<meta characters = "UFT-8">
+<h1>
+    Programa para calcular los puntajes de un equipo de futbol
+</h1>
+
+<script>
+    function imprimir(mensaje){
+        document.write(mensaje);
+        saltarLinea();
+    }
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    var equipo = prompt("Escriba el nombre de su equipo");
+    var puntosAnteriorTemporada = parseInt(prompt("Digite los puntos del equipo " + equipo + " de la anterior temporada"));
+    var victorias = parseInt(prompt("Informe el numero de victorias del equipo " + equipo));
+    var empates = parseInt(prompt("Informe el numero de empates del equipo " + equipo));
+
+    var puntosTotales = (victorias * 3) + empates;
+
+    imprimir("El recuento de puntos del equipo " + equipo + " es de: " + puntosTotales);
+
+    if(puntosTotales > puntosAnteriorTemporada){
+        imprimir("El equipo " + equipo + " le fue mejor esta temporada");
+    }
+    if(puntosTotales < puntosAnteriorTemporada){
+        imprimir("El equipo " + equipo + " le fue peor en esta temporada");
+    }
+    if(puntosTotales == puntosAnteriorTemporada){
+        imprimir("El equipo " + equipo + " le fue igual que en la anterior temporada");
+    }
+
+</script>
