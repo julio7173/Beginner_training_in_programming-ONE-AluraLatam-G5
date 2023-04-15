@@ -24,7 +24,11 @@
             alert("Bienvenido al sistema " + inicioIngresado);
             break;
         } else {
-            alert("inicio de sesión inválido. Favor intente de nuevo");
+            if(contadorIntentos == intentosPermitidos){
+                alert("Agotaste los intentos permitidos, intentelo luego");
+            }else{
+                alert("inicio de sesión inválido. Favor intente de nuevo");
+            }  
         }
         contadorIntentos++;
 
