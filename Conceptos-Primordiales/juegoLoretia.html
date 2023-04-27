@@ -1,0 +1,51 @@
+<meta charset = "UTF-8">
+
+<h1>
+    JUEGO DE LOTERIA
+</h1>
+
+<script>
+
+    function saltarLinea(){
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }    
+
+    function imprimir(mensaje){
+
+        document.write(mensaje);
+        saltarLinea();
+
+    }
+    function loteria(numero){
+
+        var numeroLimite = parseInt(numero);
+        return Math.round(Math.random() * numeroLimite);
+
+    }
+    
+    var numeroLoteria = parseInt(prompt("Digite el numero limite"));
+    var numeroSistema = loteria(numeroLoteria);
+    var numeroJugador = parseInt(prompt("Digite un numero entre el 0 y el " + numeroLoteria));
+
+    if(numeroJugador == numeroSistema){
+
+        imprimir("Felicidades, usted acerto al numero " + numeroSistema + " del sistema");
+
+    }else{
+
+        if(numeroJugador > numeroSistema){
+
+            imprimir("Lo siento, usted perdio, su numero fue mayor a " + numeroSistema + " que lanzo el sistema");
+
+        }else{
+
+            imprimir("Lo siento, usted perdio, su numero fue menor a " + numeroSistema + " que lanzo el sistema");
+            
+        }
+        
+    }
+
+</script>
